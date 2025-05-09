@@ -1,5 +1,3 @@
-import pandas as pd
-
 from src.utils.constants import HOURS_IN_YEAR, MWH_TO_PJ, PJ_TO_MTPA
 
 
