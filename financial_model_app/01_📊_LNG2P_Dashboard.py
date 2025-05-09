@@ -2,9 +2,10 @@ import os
 
 import pandas as pd
 import streamlit as st
-from src.components.dashboard import show_dashboard_charts
-from src.components.sidebars import show_dashboard_sidebar
-from src.utils.load_data import (
+
+from financial_model_app.src.components.dashboard import show_dashboard_charts
+from financial_model_app.src.components.sidebars import show_dashboard_sidebar
+from financial_model_app.src.utils.load_data import (
     load_emission_factors_data,
     load_plant_data,
     load_scenario_data,
