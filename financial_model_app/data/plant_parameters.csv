@@ -1,0 +1,6 @@
+power_plant,installed_capacity_mw,construction_duration_years,overnight_capex_per_kw,operational_lifetime_years,fixed_oam_cost_factor,variable_oam_cost_per_mwh,fuel_cost_per_tLNG,carbon_cost_per_tco2e,decommissioning_duration_years,capex_contingency_factor,decommissioning_cost_factor,efficiency_rate,emission_factor_mtco2e_per_pj,discount_rate,exchange_rate
+Ankerlig,1338,3,1307.96,60,0.03,7.00,90.00,23.00,10,0.10,0.15,0.60,0.05034,0.07,18.00
+Gourikwa,746,2,729.25,60,0.03,7.00,90.00,23.00,10,0.10,0.15,0.60,0.05034,0.07,18.00
+IPP1000,1000,3,977.55,60,0.03,7.00,90.00,23.00,10,0.10,0.15,0.60,0.05034,0.07,18.00
+IPP2000,2000,4,1955.10,60,0.03,7.00,90.00,23.00,10,0.10,0.15,0.60,0.05034,0.07,18.00
+ESKOM3000,3000,5,2932.65,60,0.0,7.00,90.00,23.00,10,0.10,0.15,0.60,0.05034,0.07,18.00
