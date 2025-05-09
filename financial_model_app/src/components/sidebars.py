@@ -12,10 +12,10 @@ def show_dashboard_sidebar(scenario_data, plant_data):
 
     with st.sidebar.expander(":blue[LNG-to-Power scenario formulation]"):
         # st.image(os.getcwd() + "/financial_model_app/asserts/developer.png")
-        st.logo(
-            image=os.getcwd() + "/financial_model_app/asserts/developer.png",
-            size="large",
-        )
+        # st.logo(
+        #     image=os.getcwd() + "/financial_model_app/asserts/developer.png",
+        #     size="large",
+        # )
         # select scenario variables - the selection drives the electricity generated, the LNG volumes
         # required, CO2e emissions, discounted costs, localized cost of electricity, and sensitivity
         # analysis for all parameters except load factor for peaking, mid-merit and baseload scenarios.
