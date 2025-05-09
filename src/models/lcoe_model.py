@@ -1,9 +1,9 @@
-from financial_model_app.src.models.lng_demand_model import (
+from src.models.lng_demand_model import (
     electricity_demand_pj_mtco2e,
     electricity_output_mwh,
     feedstock_demand_mtpa,
 )
-from financial_model_app.src.utils.constants import MILLION, PRESENT_YEAR, THOUSAND
+from src.utils.constants import MILLION, PRESENT_YEAR, THOUSAND
 
 
 class LCOEData:

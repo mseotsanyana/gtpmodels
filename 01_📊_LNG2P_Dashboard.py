@@ -3,9 +3,9 @@ import os
 import pandas as pd
 import streamlit as st
 
-from financial_model_app.src.components.dashboard import show_dashboard_charts
-from financial_model_app.src.components.sidebars import show_dashboard_sidebar
-from financial_model_app.src.utils.load_data import (
+from src.components.dashboard import show_dashboard_charts
+from src.components.sidebars import show_dashboard_sidebar
+from src.utils.load_data import (
     load_emission_factors_data,
     load_plant_data,
     load_scenario_data,
@@ -13,12 +13,10 @@ from financial_model_app.src.utils.load_data import (
 )
 
 path = os.getcwd()
-plant_data = pd.read_csv(path + "/financial_model_app/data/plant_parameters.csv")
-scenario_data = pd.read_csv(path + "/financial_model_app/data/scenarios.csv")
-emission_data = pd.read_csv(path + "/financial_model_app/data/emission_factors.csv")
-sensitivity_data = pd.read_csv(
-    path + "/financial_model_app/data/sensitivity_parameters.csv"
-)
+plant_data = pd.read_csv(path + "/data/plant_parameters.csv")
+scenario_data = pd.read_csv(path + "/data/scenarios.csv")
+emission_data = pd.read_csv(path + "/data/emission_factors.csv")
+sensitivity_data = pd.read_csv(path + "/data/sensitivity_parameters.csv")
 
 for k, v in st.session_state.items():
     st.session_state[k] = v

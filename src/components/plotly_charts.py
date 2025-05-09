@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import streamlit as st
 from plotly.subplots import make_subplots
 
-from financial_model_app.src.utils.constants import BILLION
+from src.utils.constants import BILLION
 
 
 ## creating plots to visualize results

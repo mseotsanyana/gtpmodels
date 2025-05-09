@@ -2,7 +2,7 @@ import os
 
 import streamlit as st
 
-from financial_model_app.src.utils.constants import (
+from src.utils.constants import (
     parameter_labels,
     parameter_step_values,
 )

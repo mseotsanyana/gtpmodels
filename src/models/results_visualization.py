@@ -3,7 +3,7 @@
 
 import pandas as pd
 
-from financial_model_app.src.models.lcoe_model import (
+from src.models.lcoe_model import (
     calculate_lcoe,
     create_cash_flow,
     create_cost_items,
@@ -12,12 +12,12 @@ from financial_model_app.src.models.lcoe_model import (
     roll_cost_items,
     start_of_operation_period,
 )
-from financial_model_app.src.models.lng_demand_model import (
+from src.models.lng_demand_model import (
     electricity_demand_pj,
     electricity_output_mwh,
     feedstock_demand_mtpa,
 )
-from financial_model_app.src.utils.constants import PRESENT_YEAR
+from src.utils.constants import PRESENT_YEAR
 
 
 def compute_demand_scenario_projections(plants, scenarios):

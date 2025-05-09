@@ -1,9 +1,9 @@
 import streamlit as st
 
-from financial_model_app.src.components.sensitivity_analysis import (
+from src.components.sensitivity_analysis import (
     show_sensitivity_analysis_chart,
 )
-from financial_model_app.src.components.sidebars import (
+from src.components.sidebars import (
     show_sensitivity_analysis_sidebar,
 )
 

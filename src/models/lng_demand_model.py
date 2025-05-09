@@ -1,6 +1,6 @@
 import pandas as pd
 
-from financial_model_app.src.utils.constants import HOURS_IN_YEAR, MWH_TO_PJ, PJ_TO_MTPA
+from src.utils.constants import HOURS_IN_YEAR, MWH_TO_PJ, PJ_TO_MTPA
 
 
 def electricity_output_mwh(installed_capacity_mw, capacity_factor):

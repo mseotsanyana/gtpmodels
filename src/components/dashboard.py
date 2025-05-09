@@ -1,12 +1,12 @@
 import streamlit as st
 
-from financial_model_app.src.components.plotly_charts import (
+from src.components.plotly_charts import (
     create_bar_chart,
     create_donut_pie_chart,
     create_group_bar_and_dot_chart,
     create_horizontal_group_stack_bar_chart,
 )
-from financial_model_app.src.models.results_visualization import (
+from src.models.results_visualization import (
     compute_demand_scenario_emissions,
     compute_demand_scenario_projections,
     compute_discount_cash_flows,

@@ -1,10 +1,10 @@
 import pandas as pd
 import streamlit as st
 
-from financial_model_app.src.components.plotly_charts import (
+from src.components.plotly_charts import (
     create_sensitivity_subplots_chart,
 )
-from financial_model_app.src.models.results_visualization import (
+from src.models.results_visualization import (
     compute_lcoe_sensitivities,
 )
 
