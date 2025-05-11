@@ -2,20 +2,16 @@ import os
 
 import streamlit as st
 
-from src.utils.constants import (
-    parameter_labels,
-    parameter_step_values,
-)
+from src.components.app_logo import show_app_logo
+from src.utils.constants import parameter_labels, parameter_step_values
 
 
 def show_dashboard_sidebar(scenario_data, plant_data):
 
     with st.sidebar.expander(":blue[LNG-to-Power scenario formulation]"):
-        # st.image(os.getcwd() + "/financial_model_app/asserts/developer.png")
-        # st.logo(
-        #     image=os.getcwd() + "/financial_model_app/asserts/developer.png",
-        #     size="large",
-        # )
+
+        show_app_logo()
+
         # select scenario variables - the selection drives the electricity generated, the LNG volumes
         # required, CO2e emissions, discounted costs, localized cost of electricity, and sensitivity
         # analysis for all parameters except load factor for peaking, mid-merit and baseload scenarios.
@@ -58,7 +54,7 @@ def show_dashboard_sidebar(scenario_data, plant_data):
             label="Peaking load factor: ",
             min_value=1.0,
             max_value=20.0,
-            value=st.session_state.scenarios["Peaking"],
+            # value=st.session_state.scenarios["Peaking"],
             on_change=on_change_scenario,
             args=("peaking_scenario_key",),
             key="peaking_scenario_key",
@@ -71,7 +67,7 @@ def show_dashboard_sidebar(scenario_data, plant_data):
             label="Mid-merit load factor: ",
             min_value=21.0,
             max_value=60.0,
-            value=st.session_state.scenarios["Mid-merit"],
+            # value=st.session_state.scenarios["Mid-merit"],
             on_change=on_change_scenario,
             args=("midmerit_scenario_key",),
             key="midmerit_scenario_key",
@@ -84,7 +80,7 @@ def show_dashboard_sidebar(scenario_data, plant_data):
             label="Baseload load factor: ",
             min_value=61.0,
             max_value=100.0,
-            value=st.session_state.scenarios["Baseload"],
+            # value=st.session_state.scenarios["Baseload"],
             on_change=on_change_scenario,
             args=("baseload_scenario_key",),
             key="baseload_scenario_key",
@@ -138,7 +134,6 @@ def show_dashboard_sidebar(scenario_data, plant_data):
                             )
 
         for plant, characteristics in st.session_state.plants.items():
-
             if selected_plant == plant:
                 for parameter in characteristics:
                     value_type = type(characteristics[parameter])
@@ -159,6 +154,9 @@ def show_dashboard_sidebar(scenario_data, plant_data):
 
 
 def show_sensitivity_analysis_sidebar(scenario_options, parameter_options):
+
+    show_app_logo()
+
     st.sidebar.write("Select scenarios:")
 
     selected_scenarios = {}

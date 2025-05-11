@@ -25,7 +25,7 @@ def parameter_labels():
         "efficiency_rate": "Efficiency rate (%)",
         "emission_factor_mtco2e_per_pj": "Emission factor (Number)",
         "discount_rate": "Discount rate (%)",
-        "exchange_rate": "Exchange rate (%)",
+        "exchange_rate": "Exchange rate (R/$)",
     }
 
     return labels

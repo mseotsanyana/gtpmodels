@@ -1,7 +1,11 @@
 import streamlit as st
 
+from src.components.app_logo import show_app_logo
+
 for k, v in st.session_state.items():
     st.session_state[k] = v
+
+show_app_logo()
 
 app_header = "Financial Modelling Tool for LNG-to-Power Projects"
 app_body = """

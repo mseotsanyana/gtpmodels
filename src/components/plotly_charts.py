@@ -46,7 +46,7 @@ def create_group_bar_and_dot_chart(df):
 
     fig.update_layout(
         title=dict(
-            text="Electricity generation and LNG volumes by scenario and power plant.",
+            text="Electricity production and LNG volumes by scenario and power plant.",
             y=1.0,  # -0.98
             x=0,
             xanchor="left",
@@ -62,10 +62,10 @@ def create_group_bar_and_dot_chart(df):
     # fig.update_layout()
 
     fig.update_yaxes(
-        title_text="LNG Feedstock (MTPA)", rangemode="tozero", secondary_y=True
+        title_text="LNG Volume (MTPA)", rangemode="tozero", secondary_y=True
     )
     fig.update_yaxes(
-        title_text="Generated Electricity (PJ/Year)",
+        title_text="Electricity Production (PJ/Year)",
         rangemode="tozero",
         secondary_y=False,
     )

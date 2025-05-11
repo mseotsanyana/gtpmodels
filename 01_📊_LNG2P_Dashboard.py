@@ -31,13 +31,9 @@ def main():
         initial_sidebar_state="expanded",
     )
 
-    # st.write(plant_data)
-    # st.write(scenario_data)
-    # st.write(emission_data)
-    # st.write(sensitivity_data)
-
-    # The main function of the app
-    # st.write("## Gas To Power Financial Model")
+    # Ensure refresh_plants_key exists in session state.
+    if "refresh_plants_key" not in st.session_state:
+        st.session_state.refresh_plants_key = "0"
 
     # Initialize plant data from csv file into session state.
     if "plants" not in st.session_state:
@@ -66,10 +62,6 @@ def main():
         st.session_state.selected_parameters = ["Select All"]
         st.session_state["max_selections"] = 1
 
-    # Ensure refresh_plants_key exists in session state.
-    if "refresh_plants_key" not in st.session_state:
-        st.session_state.refresh_plants_key = "0"
-
     # Ensure refresh_scenarios_key exists in session state.
     if "refresh_scenarios_key" not in st.session_state:
         st.session_state.refresh_scenarios_key = "0"
@@ -78,7 +70,8 @@ def main():
     if "key_Peaking" not in st.session_state:
         st.session_state.key_Peaking = True
 
-    # st.write(st.session_state)
+
+    st.write(st.session_state)
 
     # show the dashboard sidebar
     show_dashboard_sidebar(
