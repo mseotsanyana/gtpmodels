@@ -70,8 +70,7 @@ def main():
     if "key_Peaking" not in st.session_state:
         st.session_state.key_Peaking = True
 
-
-    st.write(st.session_state)
+    # st.write(st.session_state)
 
     # show the dashboard sidebar
     show_dashboard_sidebar(

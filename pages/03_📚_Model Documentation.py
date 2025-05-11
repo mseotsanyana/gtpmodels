@@ -119,9 +119,9 @@ parameters_header = """Key Components of the Financial Model"""
 parameters_body = r"""
 1. $\textbf{Electricity Production and LNG Conversion} 
 \newline$ Electricity output is calculated from:
-$\newline~~~~~\text{E}_{s,t,y} = \text{Installed Capacity}_{t} \times \text{Load Factor} \times 8760 $
+$\newline~~~~~\text{E}_{s,t,y} = \text{Installed Capacity}_{t,y} \times \text{Load Factor}_{s} \times 8760 $
 $\newline$ LNG volume is derived via:
-$\newline~~~~~\text{Tonnes LNG} = \left(\frac{\text{E}_{s,t,y}} {\text{Efficiency Rate}} 
+$\newline~~~~~\text{Tonnes LNG}_{s,t,y} = \left(\frac{\text{E}_{s,t,y}} {\text{Efficiency Rate}_{t,y}} 
 \times \text{LNG Conversion Factor} \right) $
 
 2. $\textbf{Capital Expenditure (CAPEX)} \newline$ Includes:
@@ -132,7 +132,7 @@ $\newline~~~~~\text{Tonnes LNG} = \left(\frac{\text{E}_{s,t,y}} {\text{Efficienc
     - etc. 
 
     Calculated as:
-    $\newline~~~~~\text{CAPEX}_{s,t,y} = \text{Installed Capacity}_{t} \times \text{Unit Cost} $ 
+    $\newline~~~~~\text{CAPEX}_{s,t,y} = \text{Installed Capacity}_{t,y} \times \text{Unit Cost} $ 
 
 3. $\textbf{Fixed Operating and Maintenance (FO\&M)} \newline$
 Annual costs unrelated to energy output, including:
@@ -151,10 +151,10 @@ Annual costs unrelated to energy output, including:
     $\newline~~~~~\text{VO\&M}_{s,t,y} = \text{E}_{s,t,y} \times \text{Cost per MWh} $ 
 
 5. $\textbf{Fuel Costs} \newline $ Based on LNG consumption: 
-$\newline~~~~~\text{Fuel Costs} = \text{Tonnes LNG} \times \text{LNG Unit Price} $
+$\newline~~~~~\text{Fuel Costs}_{s,t,y} = \text{Tonnes LNG}_{s,t,y} \times \text{LNG Unit Price} $
 
 6. $\textbf{Carbon Costs} \newline$ Costs from $\text{CO}_{2}$ emissions:
-$\newline~~~~~\text{Carbon Costs} = \left(\text{Tonnes LNG} \times \text{Emission Factor} 
+$\newline~~~~~\text{Carbon Costs}_{s,t,y} = \left(\text{Tonnes LNG}_{s,t,y} \times \text{Emission Factor} 
  \right) \times \text{Carbon Price} $
 
  7. $\textbf{Decommissioning Costs} \newline$ 
